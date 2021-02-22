@@ -36,7 +36,7 @@ For the task of classification, the network is trained on 10,000 simulated traje
 
 ### Testing using MoNet
 
-For testing data from experiments, MoNet received data in `.mat` format via `classification_on_file(file = './data/AuNRs_300.mat')`. The input data must have the structure of `[x,y,k]`, where k is the index for the trajectory that starts from 1 and goes up to the total number of trajectories of length 300 that needs to be tested. The example data set included in the ./data folder (`AuNRs_300.mat`) includes all the 300-frame trajectories collected from our liquid cell TEM experiments for all nanoparticles, indexed from 1 to 459. Please refer to the manuscript for the details about the data collection.
+For testing data from experiments, MoNet received data in `.mat` format via `classification_on_file(file = './data/AuNRs_300.mat')`. The input data must have the structure of `[x,y,k]`, where k is the index for the trajectory that starts from 1 and goes up to the total number of trajectories that needs to be tested. The example data set included in the ./data folder (`AuNRs_300.mat`) includes all the 300-frame long trajectories collected from our liquid cell TEM experiments for all nanoparticles, indexed from 1 to 459. Please refer to the manuscript for the details about the data collection.
 
 For testing simulated data change the classification testing file to `classification_on_sim()`. 
 
