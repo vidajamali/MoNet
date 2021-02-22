@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # MoNet ([10.1073/pnas.2017616118](*))
 
 
