@@ -1,3 +1,6 @@
 theme: jekyll-theme-cayman
-header: 
-  teaser: "./images/Claude-Monet-Impression-Sunrise.JPEG"
+```{css my-header-colors, echo = FALSE}
+.page-header {
+    background-image: linear-gradient(120deg, red, orange);
+}
+```
