@@ -1,2 +1,3 @@
 theme: jekyll-theme-cayman
-header: ./images/Claude-Monet-Impression-Sunrise.JPEG
+header: 
+  teaser: "./images/Claude-Monet-Impression-Sunrise.JPEG"
