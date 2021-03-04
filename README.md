@@ -1,4 +1,4 @@
-# MoNet ([10.1073/pnas.2017616118](*))
+# MoNet ([https://doi.org/10.1073/pnas.2017616118](https://doi.org/10.1073/pnas.2017616118))
 
 
 ## Authors
@@ -12,7 +12,7 @@ The motion of nanoparticles near surfaces is of fundamental importance in physic
 
 * * * * * *
 ### MoNet Description
-MoNet is a trainable convolutional neural network that classifies the behavior of a trajectory from single particle tracking experiments based on three classes of diffusion (Brownian, subdiffusive Fractional Brownian Motion (FBM), and subdiffusive continuous time random walk (CTRW)) and extracts the α exponent for FBM as well as CTRW classes. This is the code for the paper [Anomalous nanoparticle surface diffusion in LCTEM is revealed by deep learning-assisted analysis](*). The architecture of MoNet is adapted from [Granik et al.](https://github.com/AnomDiffDB/DB) and is modified based on the [p-variation method](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.103.180602) to capture multiresolution correlations along the trajectory.
+MoNet is a trainable convolutional neural network that classifies the behavior of a trajectory from single particle tracking experiments based on three classes of diffusion (Brownian, subdiffusive Fractional Brownian Motion (FBM), and subdiffusive continuous time random walk (CTRW)) and extracts the α exponent for FBM as well as CTRW classes. This is the code for the paper [Anomalous nanoparticle surface diffusion in LCTEM is revealed by deep learning-assisted analysis](https://doi.org/10.1073/pnas.2017616118). The architecture of MoNet is adapted from [Granik et al.](https://github.com/AnomDiffDB/DB) and is modified based on the [p-variation method](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.103.180602) to capture multiresolution correlations along the trajectory.
 
 ### MoNet Architecture
 <p align="center">
@@ -46,7 +46,11 @@ If you are using this code, please reference our paper:
   @article{jamali2020anomalous,
     title={Anomalous Nanoparticle Surface Diffusion in Liquid Cell TEM is Revealed by Deep Learning-Assisted Analysis},
     author={Jamali, Vida and Hargus, Cory and Ben Moshe, Assaf and Aghazadeh, Amirali and Ha, Hyun Dong and Mandadapu, Kranthi K and Alivisatos, Paul},
-    year={2021},
+    volume = {118},
+	  number = {10},
+	  elocation-id = {e2017616118},
+	  year = {2021},
+	  doi = {10.1073/pnas.2017616118},
     publisher={PNAS}
     }
 ```    
