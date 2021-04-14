@@ -306,22 +306,22 @@ def generate_sim(batchsize=32,steps=1000,T=15,sigma=0.1):
             # randomly select diffusion model to simulate for this iteration
             label[i,0] = np.random.choice([0,1,2])
             if label[i,0] == 0: 
-                H = np.random.uniform(low=0.09,high=0.48) #subdiffusive
+                H = np.random.uniform(low=0.09,high=0.45) #subdiffusive
                 x,y,t = fbm_diffusion(n=steps,H=H,T=T1)
             elif label[i,0] == 1:
-                 continue  
-#                 x,y = Brownian(N=steps,T=T1,delta=1) 
+                x,y = Brownian(N=steps,T=T1,delta=1) 
             else:
-                x,y,t = CTRW(n=steps,alpha=np.random.uniform(low=0.2,high=0.99),T=T1)
+                x,y,t = CTRW(n=steps,alpha=np.random.uniform(low=0.2,high=0.9),T=T1)
             noise = np.sqrt(sigma)*np.random.randn(1,steps)
             x1 = np.reshape(x,[1,len(x)])
             x1 = x1-np.mean(x1)     
-#             x_n = x1[0,:steps]+noise
             x_n = x1[0,:steps]
             dx = np.diff(x_n)
-            # Generate OU noise to add to the data
-            nx = OrnsteinUng(n=steps,T=T1,speed=1,mean=0,vol=1)
-            dx = dx+sigma*nx
+
+            if np.std(x) < 0.000001:
+                dx = dx
+            else:
+                dx = dx/np.std(dx)
             out[i,:,0] = dx
        
         return out,label

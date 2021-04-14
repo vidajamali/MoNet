@@ -19,7 +19,6 @@ import pickle
 def classification_on_sim():
     dx,label=generate_sim(batchsize=20,steps=300,T=15,sigma=0.1)
     ### change here to load a different network model
-    print(label)
     N=np.shape(dx)[0]
     net_file = './Models/FINALmodel_300.h5'
     model = load_model(net_file)     
