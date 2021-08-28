@@ -7,7 +7,7 @@ single-trajectory networks trained to estimate the Hurst exponent.
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 from utils import fbm_diffusion
 from utils import autocorr
 import scipy.optimize

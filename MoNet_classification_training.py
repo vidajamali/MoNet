@@ -3,13 +3,13 @@ Updated version of this code has different number of layers with different filte
 and different dilations (2^n) inspired by p-variation statistical method; Refer to the 
 manuscript for more information"""
 import numpy as np
-from keras.models import Model
-from keras.layers import Dense,BatchNormalization,Conv1D
-from keras.layers import Input,GlobalMaxPooling1D,concatenate
-from keras.optimizers import Adam
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Dense,BatchNormalization,Conv1D
+from tensorflow.keras.layers import Input,GlobalMaxPooling1D,concatenate
+from tensorflow.keras.optimizers import Adam
 from utils import generate
 import tensorflow as tf
-from keras.callbacks import EarlyStopping,ReduceLROnPlateau,ModelCheckpoint,CSVLogger
+from tensorflow.keras.callbacks import EarlyStopping,ReduceLROnPlateau,ModelCheckpoint,CSVLogger
 import datetime
 
 batchsize = 32

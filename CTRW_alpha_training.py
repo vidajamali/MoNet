@@ -1,11 +1,11 @@
 
 import numpy as np
-from keras.models import Model
-from keras.layers import Dense,BatchNormalization,Conv1D
-from keras.layers import Input,GlobalMaxPooling1D,concatenate
-from keras.optimizers import Adam
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Dense,BatchNormalization,Conv1D
+from tensorflow.keras.layers import Input,GlobalMaxPooling1D,concatenate
+from tensorflow.keras.optimizers import Adam
 from utils import generate_CTRW
-from keras.callbacks import EarlyStopping,ReduceLROnPlateau,ModelCheckpoint
+from tensorflow.keras.callbacks import EarlyStopping,ReduceLROnPlateau,ModelCheckpoint
 
 batchsize = 32
 T = np.arange(19,21,0.1) # this provides another layer of stochasticity to make the network more robust
