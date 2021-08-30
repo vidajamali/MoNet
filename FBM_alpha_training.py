@@ -1,11 +1,11 @@
 
 import numpy as np
-from keras.models import Model
-from keras.layers import Dense,BatchNormalization,Conv1D
-from keras.layers import Input,GlobalMaxPooling1D,concatenate
-from keras.optimizers import Adam
-from utils import fbm_regression
-from keras.callbacks import EarlyStopping,ReduceLROnPlateau,ModelCheckpoint
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Dense,BatchNormalization,Conv1D
+from tensorflow.keras.layers import Input,GlobalMaxPooling1D,concatenate
+from tensorflow.keras.optimizers import Adam
+from utils import generate_fbm
+from tensorflow.keras.callbacks import EarlyStopping,ReduceLROnPlateau,ModelCheckpoint
 
 
 batchsize = 64
@@ -93,11 +93,11 @@ callbacks = [EarlyStopping(monitor='val_loss',
                          save_weights_only=False)]
 
 
-gen = fbm_regression(batchsize=batchsize,steps=steps,T=T,sigma=sigma)
+gen = generate_fbm(batchsize=batchsize,steps=steps,T=T,sigma=sigma)
 history = model.fit_generator(generator=gen,
         steps_per_epoch=50,
         epochs=1000,
         verbose=1,
         callbacks=callbacks,
-        validation_data=fbm_regression(steps=steps,T=T,sigma=sigma),
+        validation_data=generate_fbm(steps=steps,T=T,sigma=sigma),
         validation_steps=10)

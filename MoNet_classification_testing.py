@@ -6,7 +6,7 @@ net.
 """  
  
 import numpy as np
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 from utils import generate_sim
 import scipy.io
 import pickle

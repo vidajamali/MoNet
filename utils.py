@@ -12,9 +12,10 @@ generated from different classes of diffusions, heavy-tailed distribution of wai
 
 import numpy as np
 from scipy import stats,fftpack
-from keras.utils import to_categorical
-from stochastic import diffusion 
+from tensorflow.keras.utils import to_categorical
+from stochastic.processes import diffusion 
 import scipy.io
+
 
 
 """

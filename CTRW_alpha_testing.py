@@ -5,7 +5,7 @@ of any given CTRW trajectory.
 """
 
 import numpy as np
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 from utils import generate_CTRW
 import seaborn as sns
 import scipy.io
